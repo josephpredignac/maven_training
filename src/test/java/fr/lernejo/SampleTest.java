@@ -46,4 +46,9 @@ class SampleTest {
         Sample sample = new Sample();
         Assertions.assertEquals(sample.fact(0), 1);
     }
+    @Test
+    void fact_neg() {
+        Sample sample = new Sample();
+        Assertions.assertThrows(IllegalArgumentException.class, () -> sample.fact(-5));
+    }
 }
